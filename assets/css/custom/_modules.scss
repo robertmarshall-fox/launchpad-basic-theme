@@ -1,0 +1,148 @@
+.module {
+    position: relative;
+    background-color: #fff;
+    overflow: hidden;
+    font-size: 1rem; /** Reset module top level div **/
+    float: left;
+    
+    .entry-text {
+        padding: 1.25em 1.125em 1.25em 0;
+        width: calc( 100% - 1.5em);
+        background-color: #fff;
+        margin-top: -4.25em;
+        z-index: 5;
+        position: relative;
+        
+        .details {
+        
+            font-size: 1em;
+            font-weight: 700;
+            margin: 0 0 0.85em 0;
+            color: $fox_grey;
+            text-transform: uppercase;
+            
+            .dot {
+                margin: 0 0.5em;
+            }
+
+            .dot:after {
+                content: '\b7';
+                position: relative;
+            }
+
+        }
+        
+    }
+    
+    a {
+        display: block;
+        opacity: 1;
+        text-decoration: none;
+        height: 100%;
+
+        h2,
+        h1,
+        p {
+            opacity: 1;
+            text-decoration: none;
+        }
+        
+        .line {
+            position: absolute;
+            bottom: 0;
+            left:0;
+            height: 0.3125em;
+            background-color: $fox_red_primary;
+            width: 60%;
+            z-index: 6;
+        }
+
+    }
+
+    a:hover {
+        
+        .entry-media .media-fit img {
+            -ms-transform: scale(1.025, 1.025); /* IE 9 */
+            -webkit-transform: scale(1.025, 1.025); /* Safari */
+            transform: scale(1.025, 1.025);
+        }
+        
+        .entry-media .overlay {
+            opacity: 0.1;
+        }
+        
+        .line {
+            width: 58%;
+        }
+        
+        h1,
+        h2 {
+            color: $fox_red_secondary;
+        }
+        
+    }
+
+    h1,
+    h2 {
+        font-size: 1.75em;
+        line-height: 1.125em;
+        color: $fox_red_primary;
+        margin: 0;
+    }
+    
+    p {
+        font-size: 1.125em;
+    }
+
+    /** Image **/
+    .entry-media {
+        width: 100%;
+        padding-bottom: 67%;
+        position: relative;
+        z-index: 3;
+
+        .media-fit,
+        .overlay,
+        .play {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            overflow: hidden;
+        }
+
+    }
+
+    .entry-media.sqr {
+        padding-bottom: 100%;
+    }
+
+    .entry-media .media-fit img {
+        /** Add border and remoce from image width**/
+        /** This is because the image bleeds behind the white text area **/
+        width: calc(100% - 2px);
+        height: calc(100% - 2px);
+        border: 1px solid #fff;
+    }
+    
+}
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 30em) {  /** 480px **/
+    
+    .module {
+        .entry-text {
+            padding: 1.25em;
+        }
+        
+        .entry-media .media-fit img {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        
+    }
+        
+}

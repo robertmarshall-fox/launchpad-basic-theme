@@ -1,0 +1,10 @@
+/**
+ * This file is used to bring together any files that are considered critical
+ *
+ * Not recommended for standard css rules, this can be used within the general
+ * scss files.
+ *
+ * This file is created as postcss-critical-split does not grab @imports
+ **/
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700);

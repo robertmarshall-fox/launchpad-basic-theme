@@ -1,0 +1,144 @@
+.gc {
+    
+    width: 100%;
+    position: relative;
+    margin: 0 0 1em 0;
+    
+    [class^="c-"] {
+        float: left;
+    }
+
+    .c-1,
+    .c-2,
+    .c-3,
+    .c-4 {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+    
+}
+
+.gc.mob-no-show {
+    display: none;
+}
+
+.gc::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+@media only screen and (min-width: 40em) {  /** 640px **/
+    
+    .gc {
+    
+        /** Push all columns to be the same height **/
+        display: flex;
+        flex-flow: row wrap;
+        
+        .c-2,
+        .c-3, 
+        .c-4 {
+            margin: 0 1em 1em 0;
+            width: calc( 50% - 0.5em );
+        }
+
+        .c-2:nth-child(even),
+        .c-3:nth-child(even),
+        .c-4:nth-child(even) {
+            margin-right: 0;
+            clear: right;
+        }
+                
+    }
+            
+}
+
+@media only screen and (min-width: 47.875em) {  /** 766px **/
+    
+    .gc {
+        
+        margin-bottom: 2em;
+                                        
+    }
+    
+    .gc.mob-no-show {
+        display: block;
+    }
+                
+}
+
+@media only screen and (min-width: 65em) { /* 1040px */
+    
+    .gc {
+        
+        .c-3,
+        .c-3:nth-child(even),
+        .c-4,
+        .c-4:nth-child(even){
+            /** 3 columns have two inner gutters **/
+            /** exact 3rd as percentage, then 2 gutters, divided by 3 blocks **/
+            width: calc( 33.33333% - ( ( 1em * 2) / 3 ) );
+            margin-right: 1em;
+            clear: none;
+        }
+        
+        .c-3:nth-child(3n+3),
+        .c-4:nth-child(3n+3) {
+            margin-right: 0;
+        }  
+        
+        .c-3:nth-child(3n+4),
+        .c-4:nth-child(3n+4) {
+            clear: left;
+        }  
+              
+    }
+    
+    /** If we want even colomns (4 across) to stay even, use the eq class **/  
+    .gc.eq {
+        
+        .c-4,
+        .c-4:nth-child(3n+3),
+        .c-4:nth-child(3n+4) {
+            margin: 0 1em 1em 0;
+            width: calc( 50% - 0.5em );
+            clear: none;
+        }
+        
+        .c-4:nth-child(even) {
+            margin-right: 0;
+            clear: right;  
+        }
+        
+    }
+            
+}
+
+@media only screen and (min-width: 90em) {
+        
+    .gc,
+    .gc.eq {
+    
+        .c-4,
+        .c-4:nth-child(odd),
+        .c-4:nth-child(even),
+        .c-4:nth-child(3n+3) {
+            /** 3 columns have two inner gutters **/
+            /** exact 3rd as percentage, then 2 gutters, divided by 3 blocks **/
+            width: calc( 25% - ( ( 1em * 3) / 4 ) );
+            margin-right: 1em;
+            clear: none;
+        }
+
+        .c-4:nth-child(4n+4) {
+            margin-right: 0;
+        }
+        
+        .c-4:nth-child(4n+5) {
+            clear: left;
+        }
+        
+    }
+    
+}

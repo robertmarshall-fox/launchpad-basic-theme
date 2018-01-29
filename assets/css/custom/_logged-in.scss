@@ -1,0 +1,15 @@
+@media screen and ( min-width: 782px ) {
+    
+    body.logged-in { 
+        margin-top: 32px !important; 
+    }
+    
+    body.logged-in header {
+        margin-top: 32px 
+    }
+    
+    body.logged-in.navigation-open #site-navigation {
+        margin-top: 32px
+    }
+    
+}

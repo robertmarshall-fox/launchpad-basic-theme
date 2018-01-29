@@ -1,0 +1,138 @@
+/* 
+ * This file is very specific to the WYSIWYG editor 
+ *
+ * HOWEVER - Make sure you put the right CSS here. Try not to
+ * confused font.css with going in this file. Make everything
+ * as slim as possible.
+*/
+
+.wysiwyg {
+    
+    font-size: 1rem;
+    
+    a {
+        display: inline;
+    }
+
+    .alignleft, img.alignleft,
+    .alignright, img.alignright,
+    .aligncenter, img.aligncenter {
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
+        clear: both;
+    }
+    
+    img {
+        margin-bottom: 1.125em;
+    }
+    
+    ul, ol { 
+        margin: 0 0 0.875rem 0; 
+    }
+
+    ul li, ol li {
+        padding-left: 2em;
+    }
+
+    ul li:before {
+        position: absolute;
+        line-height: inherit;
+        top: 0;
+        left: 0;
+        font-size: inherit;
+        font-family: FontAwesome;
+        content: "\f068";
+    }
+
+    ul.relsyn li {
+        padding-left: 0.5em;
+    }
+    
+    ul.relsyn li:before {
+        content: " ";
+    }
+    
+    ol {
+        counter-reset: customCount;
+    }
+
+    ol > li {
+        counter-increment: customCount;
+    }
+
+    ol li:before {
+        position: absolute;
+        content: counter(customCount) ". "; 
+        left: 0;
+        top: 0;
+        text-align: center;
+        width: 0.9375em;
+    }
+
+    
+    /** All Forms used within the WYSIWYG **/
+    
+    form {
+        
+        label {
+            margin-bottom: 0.25em;
+        }
+        
+        input,
+        textarea {
+            padding:  0.5em;
+            max-width: 100%;
+        }
+        
+        input[type="submit"] {
+            padding:0.35em 0.8em; 
+            background:#ccc; 
+            border:0 none;
+            cursor:pointer;
+            border-radius: 0.25em;  
+            opacity: 1;
+        }
+        
+    }
+    
+
+    
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 30em) {  /** 480px **/
+    
+    .wysiwyg {
+
+        .alignleft, img.alignleft {
+            margin-right: 0.875em;
+            display: inline;
+            float: left;
+        }
+
+        .alignright, img.alignright {
+            margin-left: 0.875em;
+            display: inline;
+            float: right;
+        }
+
+        .aligncenter, img.aligncenter {
+            margin-right: auto;
+            margin-left: auto;
+            display: block;
+            clear: both;
+        }
+        
+    }
+    
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 40em) {  /** 640px **/
+
+    .wysiwyg {
+        font-size: 1.2222222222222223rem;        
+    }
+
+}

@@ -1,0 +1,52 @@
+/** Import Vendor Styles **/
+
+/** REMEMBER - any important @imports that are critical should
+ *             be added in the critical/critical.scss file 
+ **/
+
+@import 'vendor/normalize.min';
+@import 'vendor/animate.min';
+@import 'vendor/font-awesome.min';
+@import 'vendor/jquery.fancybox.min';
+
+//Grab sprite.css from img/svg-sprite/css folder
+@import '../img/svg-sprite/css/sprite';
+
+@import 'custom/reset';
+
+@import 'custom/colors';
+
+@import 'custom/fonts';
+
+@import 'custom/essentials';
+
+@import 'custom/wrapper';
+
+@import 'custom/header';
+@import 'custom/logged-in';
+
+@import 'custom/pages';
+
+@import 'custom/single';
+
+@import 'custom/wysiwyg';
+
+@import 'custom/social';
+
+@import 'custom/sharing';
+
+@import 'custom/comments';
+
+@import 'custom/toggle';
+
+@import 'custom/grid';
+
+@import 'custom/modules';
+
+@import 'custom/images';
+
+@import 'custom/carousel';
+
+@import 'custom/search';
+
+@import 'custom/footer';

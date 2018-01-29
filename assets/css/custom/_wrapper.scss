@@ -1,0 +1,149 @@
+/** General Wrappers & Grid **/
+/* Here we set the page contraints and grid framework to fit all the elements inside */
+/* This includes header, footer, page-wrapper ect */
+
+html, 
+body {
+    height: 100%;    
+}
+
+.search-active,
+.navigation-open {
+    overflow-y: hidden;
+}
+
+/** Keep footer at bottom **/
+
+#footer-pusher {
+    position: relative;
+    min-height: 100%;
+}
+
+#page-wrapper {
+
+}
+
+.thin-inner,
+#disqus_thread {
+    margin: 0 auto;
+    max-width: 62.5em;
+    padding: 1.25em;
+    background-color: #fff;
+}
+
+.thin-inner {
+    * > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+#disqus_thread {
+    padding-top: 0;
+}
+
+
+/** This pushes all content to the same center position **/
+.page-inner-wrap,
+.article-inner-wrap {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+.page-inner-wrap {
+    padding: 0 1.125em;
+}
+
+
+article {
+    background-color: #fff;
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 30em) {  /** 480px **/
+    
+    
+}
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width: 47.875em) {  /** 766px **/
+        
+    
+}
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 64em) {  /** 992px **/
+            
+    .thin-inner,
+    #disqus_thread {
+        padding: 2em;
+    }
+            
+}
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 75em) {  /** 1200px **/
+
+    .article-inner-wrap,
+    .page-inner-wrap {
+        width: 73em;
+        padding: 0 1.125em;
+    }
+    
+    .thin-inner,
+    #disqus_thread {
+        padding: 3em;
+    }
+    
+    #disqus_thread {
+        padding-top: 0;
+    }
+         
+}
+
+
+/** IMac **/
+@media only screen and (min-width: 79.375em) {  /** 1270px **/
+        
+    .article-inner-wrap,
+    .page-inner-wrap {
+        width: 76em;
+    }
+         
+}
+
+
+@media only screen and (min-width: 90em) {
+    
+    .article-inner-wrap,
+    .page-inner-wrap {
+        width: 86em;
+    }
+     
+}
+
+
+/** Pauls Screen - No bigger than this! **/
+@media only screen and (min-width: 100em) {  /** 1600px **/
+
+    .article-inner-wrap,
+    .page-inner-wrap {
+        width: calc( 100% - 2.5em );
+        margin: 0 1.125em;
+    }
+    
+}
+
+/** Round up wrappers **/
+@media only screen and (min-width: 140em) {
+    
+    .article-inner-wrap,
+    .page-inner-wrap {
+        width: 137.5em;
+    }
+    
+}
